@@ -1,0 +1,78 @@
+import './App.css';
+import NavBar from './Components/NavBar'
+
+import Sign_Up from './Components/Login/SignUp.js'
+import HomePage from './Components/HomePage'
+import AddPosts from './Components/AddPosts'
+import UserPage from './Components/UserPage'
+import Chat from './Components/Chat'
+import Login from './Components/Login'
+import styled from 'styled-components'
+import { Container } from 'react-bootstrap'
+import { useStateValue } from './Contexts/StateProvider'
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import db from './firebaseConfig'
+import firebase from 'firebase'
+
+
+function App() {
+  const MainPage = () => {
+    const randmeme = () => {
+      fetch("https://epaxai.azurewebsites.net/getmeme/")
+        .then(response => response.json())
+        .then(
+          data =>
+            db.collection('posts').add({
+              profilePic: user.photoURL,
+              image: "https://www.tenouk.com/Module10_files/preprocessordirective014.png",
+              username: "ProgrammerBot",
+              timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+              message: data.title,
+              liked: false,
+              likes: 0,
+            })
+        )
+    }
+    return (
+      <Router>
+
+        {/* NavBar Components*/}
+        <NavBar />
+        {/* SideBar Components */}
+        <Body>
+
+          {/* Feed Components */}
+          <Switch>
+            <Route path="/sendposts" component={AddPosts} />
+            <Route path="/chats" component={Chat} />
+            <Route path="/user" component={UserPage} />
+            <Route path="/" exact component={HomePage} />
+          </Switch>
+        </Body>
+      </Router>
+
+    )
+  }
+
+  const [{ user }, dispatch] = useStateValue();
+  return (
+    <>
+      {!user ? <Login /> : <MainPage />}
+    </>
+  );
+}
+
+export default App;
+
+const Body = styled.div`
+width : 80%;
+max-width: 600px;
+margin: 0 auto;
+margin-top : 15px;
+@media only screen and (max-device-width: 600px){
+        
+    width : 90%;
+}
+`
+const MainPage = styled.div`
+`
