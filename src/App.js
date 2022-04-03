@@ -1,14 +1,12 @@
 import './App.css';
 import NavBar from './Components/NavBar'
 
-import Sign_Up from './Components/Login/SignUp.js'
 import HomePage from './Components/HomePage'
 import AddPosts from './Components/AddPosts'
 import UserPage from './Components/UserPage'
 import Chat from './Components/Chat'
 import Login from './Components/Login'
 import styled from 'styled-components'
-import { Container } from 'react-bootstrap'
 import { useStateValue } from './Contexts/StateProvider'
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import db from './firebaseConfig'
