@@ -1,7 +1,3 @@
-**Progarmmed by Adem Robert**
-
-**Note: This Code is not Very well commented i haven't made comments for every line of code!!!**
-**Code might now be well write but i hope you guys Enjoy This Code**
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
