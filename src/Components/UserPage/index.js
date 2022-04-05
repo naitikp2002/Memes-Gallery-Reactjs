@@ -8,15 +8,16 @@ function UserPage() {
     console.log(user)
     return (
         <>
+        <Body>
             <Card className="bg-white rounded-xl shadow-md my-2">
                 <Headder className=" flex  justify-center gap-2 md:gap-10">
                     <div className="Avatar my-4 ">
                         <img src={user.photoURL} alt="" />
                     </div>
                     <div className="userdata">
-                        <div className="text-2xl flex gap-2 items-center"><p>{user.displayName}</p><button className="px-2 py-1 text-sm  bg-blue-500 outline-0 font-bold text-white rounded rounded-md">Follow</button></div>
-                        <h2 className="text-gray-700">{user.email}</h2>
-                        <div className="flex justify-start gap-2 md:gap-5"><p><span class="font-semibold" >0</span> followers </p> <p><span class="font-semibold" >0</span> Posts</p></div>
+                        <div className="text-2xl flex gap-2 items-center"><b>{user.displayName}</b></div>
+                        <h5 className="text-gray-700">{user.email}</h5>
+                        {/* <div className="flex justify-start gap-2 md:gap-5"><p><span class="font-semibold" >0</span> followers </p> <p><span class="font-semibold" >0</span> Posts</p></div> */}
                     </div>
 
                 </Headder>
@@ -27,6 +28,7 @@ function UserPage() {
 
             </Card>
             <UserPost />
+            </Body>
         </>
     )
 }
@@ -47,5 +49,18 @@ const Headder = styled.div`
     } 
     
 }
+`
+
+const Body = styled.div`
+width : 80%;
+max-width: 600px;
+margin: 0 auto;
+margin-top : 15px;
+@media only screen and (max-device-width: 600px){
+        
+    width : 90%;
+}
+`
+const MainPage = styled.div`
 `
 

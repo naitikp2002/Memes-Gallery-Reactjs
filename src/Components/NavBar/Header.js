@@ -9,6 +9,8 @@ import Sidebar from '../Sidebar'
 import { useStateValue } from '../../Contexts/StateProvider'
 import { Link } from "react-router-dom";
 import { useState, useEffect } from 'react';
+import { Create } from '@material-ui/icons';
+
 
 function Header() {
     const [{ user }, dispatch] = useStateValue();
@@ -25,7 +27,7 @@ function Header() {
                 <div className="flex m-2  items-center" >
 
                     <div className="ml-2 w-10">
-                        <img className="h-10 " src="https://swasthikshetty10.github.io/logo.png" />
+                        <img className="h-10 " src="https://swasthikshetty10.github.io/logo.png" alt='' />
                     </div>
 
                     <div className="flex  ml-2 items-center  bg-gray-300 rounded-md">
@@ -45,9 +47,9 @@ function Header() {
                 <div className="MobSticky">
                     <HeaderCenter >
 
-                        <div className="header_option" id="sidebar" >
+                        {/* <div className="header_option" id="sidebar" >
                             <Sidebar />
-                        </div>
+                        </div> */}
                         <Link to="/">
 
                             <div className='header_option' onClick={() => setTimeout(function () { setPage(window.location.pathname) }, 1)} id={page === "/" && "pageactive"}>
@@ -63,7 +65,8 @@ function Header() {
 
                         <Link to="/chats">
                             <div className='header_option' onClick={() => setTimeout(function () { setPage(window.location.pathname) }, 1)} id={page === "/chats" && "pageactive"}>
-                                <ChatBubbleIcon fontSize="large" />
+                                {/* <ChatBubbleIcon fontSize="large" /> */}
+                             
                             </div>
                         </Link>
 

@@ -1,9 +1,10 @@
 import './App.css';
 import NavBar from './Components/NavBar'
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 import HomePage from './Components/HomePage'
 import AddPosts from './Components/AddPosts'
 import UserPage from './Components/UserPage'
+import Create from './Components/generatorComp/Create';
 import Chat from './Components/Chat'
 import Login from './Components/Login'
 import styled from 'styled-components'
@@ -37,16 +38,16 @@ function App() {
         {/* NavBar Components*/}
         <NavBar />
         {/* SideBar Components */}
-        <Body>
+        {/* <Body> */}
 
           {/* Feed Components */}
           <Switch>
             <Route path="/sendposts" component={AddPosts} />
-            <Route path="/chats" component={Chat} />
+            <Route path="/chats" component={Create} />
             <Route path="/user" component={UserPage} />
             <Route path="/" exact component={HomePage} />
           </Switch>
-        </Body>
+        {/* </Body> */}
       </Router>
 
     )
@@ -62,15 +63,15 @@ function App() {
 
 export default App;
 
-const Body = styled.div`
-width : 80%;
-max-width: 600px;
-margin: 0 auto;
-margin-top : 15px;
-@media only screen and (max-device-width: 600px){
+// const Body = styled.div`
+// width : 80%;
+// max-width: 600px;
+// margin: 0 auto;
+// margin-top : 15px;
+// @media only screen and (max-device-width: 600px){
         
-    width : 90%;
-}
-`
-const MainPage = styled.div`
-`
+//     width : 90%;
+// }
+// `
+// const MainPage = styled.div`
+// `

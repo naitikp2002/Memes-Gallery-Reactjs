@@ -69,8 +69,10 @@ function PostCard({ id, profilePic, image, username, timestamp, message, liked, 
                 <Avatar src={profilePic} className="Avatar" />
                 <PostInfo>
 
-                    <h3>{username}</h3>
-                    <p>{new Date(timestamp?.toDate()).toUTCString()}</p>
+
+                <h3>{username}</h3>
+                
+                    <h6 style={{color:'gray'}}>{new Date(timestamp?.toDate()).toDateString()}</h6>
                 </PostInfo>
             </Top>
 
@@ -83,12 +85,12 @@ function PostCard({ id, profilePic, image, username, timestamp, message, liked, 
                 <div className="LikeCmt ">
                     <Liked isLiked={liked.includes(`${user.uid}`)} />
                     <div className="LikeCmtIcon">
-                        <QuestionAnswerRoundedIcon />
+                        {/* <QuestionAnswerRoundedIcon /> */}
                     </div>
 
                 </div>
                 <div className="Title">
-                    <h4>{likes} Likes</h4>
+                    <h5>{likes} Likes</h5>
 
                 </div>
 

@@ -38,15 +38,16 @@ function PostFeed() {
                     <Avatar ClassNames="Avatar" src={user.photoURL} />
 
                     <input
-                        value={input}
+                        value={input} style={{marginLeft:'10px'}}
                         onChange={(e) => setInput(e.target.value)}
                         className="MsgSender" type="text" placeholder={`Ready for meme? ${user.displayName}`} />
+                       
                     <input
-                        value={url}
+                        value={url} style={{marginLeft:'10px'}}
                         onChange={(e) => setUrl(e.target.value)}
                         ClassName="UrlSender" type="text" placeholder="Image Url" />
                     <button className="HiddenBtn" onClick={handleSubmit} type="submit">
-                        Hidden btn
+                        
                 </button>
 
                 </Top>
