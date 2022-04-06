@@ -54,14 +54,14 @@ function Header() {
 
                             <div className='header_option' onClick={() => setTimeout(function () { setPage(window.location.pathname) }, 1)} id={page === "/" && "pageactive"}>
                                 {/* <HomeIcon fontSize="large" /> */}
-                                <h5 style={{color:'Blue'}}>Home</h5>
+                                <h4 style={{color:'Blue'}}>Home</h4>
                             </div>
                         </Link>
 
                         <Link to="/sendposts">
                             <div className='header_option' onClick={() => setTimeout(function () { setPage(window.location.pathname) }, 1)} id={page === "/sendposts" && "pageactive"}>
                                 {/* <AddCircleOutlineIcon fontSize="large" /> */}
-                                <h5 style={{color:'Blue'}}>Upload</h5>
+                                <h4 style={{color:'Blue'}}>Upload</h4>
                             </div>
                         </Link>
 
@@ -69,7 +69,7 @@ function Header() {
                             <div className='header_option' onClick={() => setTimeout(function () { setPage(window.location.pathname) }, 1)} id={page === "/chats" && "pageactive"}>
                                 {/* <ChatBubbleIcon fontSize="large" /> */}
                                 {/* <AddPhotoAlternateSharpIcon fontSize="large"/> */}
-                                <h5 style={{color:'Blue'}}>Create</h5>
+                                <h4 style={{color:'Blue'}}>Create</h4>
                             </div>
                         </Link>
 

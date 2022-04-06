@@ -49,7 +49,7 @@ function Meme({meme,setmeme}) {
            <div style={{textAlign:'center'}} >
            <Button style={{marginRight:'20px'}} variant="dark" size="lg" onClick={GenerateMeme} > Generate  </Button>
            {/* <Button className=""variant="dark" size="lg" onClick={GenerateMeme}> Generate  </Button> */}
-           <Button variant="primary" size="lg" onClick={()=>{setmeme(null)}}> Choose Templat  </Button>
+           <Button variant="primary" size="lg" onClick={()=>{setmeme(null)}}> Choose Template  </Button>
            </div>
         </div>
     </div>
