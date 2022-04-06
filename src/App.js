@@ -35,19 +35,16 @@ function App() {
     return (
       <Router>
 
-        {/* NavBar Components*/}
-        <NavBar />
-        {/* SideBar Components */}
-        {/* <Body> */}
 
-          {/* Feed Components */}
+        <NavBar />
+
           <Switch>
             <Route path="/sendposts" component={AddPosts} />
             <Route path="/chats" component={Create} />
             <Route path="/user" component={UserPage} />
             <Route path="/" exact component={HomePage} />
           </Switch>
-        {/* </Body> */}
+
       </Router>
 
     )
