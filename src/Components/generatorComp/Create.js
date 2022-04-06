@@ -14,8 +14,8 @@ export default function Create() {
   return (
     <>
     <div style={{Width:'100%',justifyContent:'center'}}>
-    <h2>Meme Generator</h2>
-    <div style={{width:'100%',maxWidth:'100%',marginLeft:'0px'}}>
+    <h2 style={{textAlign:'center',color:'white',marginTop:'20px'}}>Meme Generator</h2>
+    <div style={{width:'100%'}}>
     {meme=== null ? <Templat templet={templet} setmeme={setmeme}/>:<Meme meme={meme} setmeme={setmeme}/>}
     </div>
     </div>
