@@ -6,7 +6,7 @@ function Templat({templet,setmeme}) {
     <div className='container'>
     {templet.map(templet=>(
     <div key={templet.id} className ="temp" onClick={()=>setmeme(templet)} > 
-    <div style={{ backgroundImage: `url(${templet.url})`, backgroundSize:"cover",backgroundPosition:"center"}} className ="Image"></div> 
+    <div style={{borderRadius:'10px', backgroundImage: `url(${templet.url})`, backgroundSize:"cover",backgroundPosition:"center"}} className ="Image"></div> 
     </div>
     ))}
     </div>

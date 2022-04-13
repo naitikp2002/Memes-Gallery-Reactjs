@@ -13,7 +13,6 @@ function Meme({meme,setmeme}) {
     boxes:[],
   });
     console.log(meme);
-
     const GenerateMeme=()=>{
       let url=` https://api.imgflip.com/caption_image?template_id=${form.template_id}&username=${form.username}&password=${form.password}`;
       form.boxes.map((box,index) => {
