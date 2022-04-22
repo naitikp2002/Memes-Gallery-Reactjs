@@ -5,9 +5,7 @@ import HomePage from './Components/HomePage'
 import AddPosts from './Components/AddPosts'
 import UserPage from './Components/UserPage'
 import Create from './Components/generatorComp/Create';
-import Chat from './Components/Chat'
 import Login from './Components/Login'
-import styled from 'styled-components'
 import { useStateValue } from './Contexts/StateProvider'
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import db from './firebaseConfig'
@@ -34,17 +32,13 @@ function App() {
     }
     return (
       <Router>
-
-
         <NavBar />
-
           <Switch>
             <Route path="/sendposts" component={AddPosts} />
             <Route path="/chats" component={Create} />
             <Route path="/user" component={UserPage} />
             <Route path="/" exact component={HomePage} />
           </Switch>
-
       </Router>
 
     )
@@ -59,6 +53,7 @@ function App() {
 }
 
 export default App;
+
 
 // const Body = styled.div`
 // width : 80%;
