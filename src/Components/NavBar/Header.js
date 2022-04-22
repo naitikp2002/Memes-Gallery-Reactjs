@@ -1,12 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 import SearchIcon from '@material-ui/icons/Search';
-import HomeIcon from '@material-ui/icons/Home';
-import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
 // import AddPhotoAlternateSharpIcon from '@mui/icons-material/AddPhotoAlternateSharp';
 import ChatBubbleIcon from '@material-ui/icons/ChatBubble';
 import { Avatar, IconButton } from '@material-ui/core'
-import Sidebar from '../Sidebar'
+
 import { useStateValue } from '../../Contexts/StateProvider'
 import { Link } from "react-router-dom";
 import { useState, useEffect } from 'react';

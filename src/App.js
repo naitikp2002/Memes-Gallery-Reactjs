@@ -14,22 +14,22 @@ import firebase from 'firebase'
 
 function App() {
   const MainPage = () => {
-    const randmeme = () => {
-      fetch("https://epaxai.azurewebsites.net/getmeme/")
-        .then(response => response.json())
-        .then(
-          data =>
-            db.collection('posts').add({
-              profilePic: user.photoURL,
-              image: "https://www.tenouk.com/Module10_files/preprocessordirective014.png",
-              username: "ProgrammerBot",
-              timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-              message: data.title,
-              liked: false,
-              likes: 0,
-            })
-        )
-    }
+    // const randmeme = () => {
+    //   fetch("https://epaxai.azurewebsites.net/getmeme/")
+    //     .then(response => response.json())
+    //     .then(
+    //       data =>
+    //         db.collection('posts').add({
+    //           profilePic: user.photoURL,
+    //           image: "https://www.tenouk.com/Module10_files/preprocessordirective014.png",
+    //           username: "ProgrammerBot",
+    //           timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+    //           message: data.title,
+    //           liked: false,
+    //           likes: 0,
+    //         })
+    //     )
+    // }
     return (
       <Router>
         <NavBar />
@@ -55,15 +55,3 @@ function App() {
 export default App;
 
 
-// const Body = styled.div`
-// width : 80%;
-// max-width: 600px;
-// margin: 0 auto;
-// margin-top : 15px;
-// @media only screen and (max-device-width: 600px){
-        
-//     width : 90%;
-// }
-// `
-// const MainPage = styled.div`
-// `

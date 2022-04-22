@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Avatar } from '@material-ui/core'
 import { useStateValue } from '../../Contexts/StateProvider'
 import UserPost from "./UserPost"
 function UserPage() {
@@ -19,13 +18,9 @@ function UserPage() {
                         <h5 className="text-gray-700">{user.email}</h5>
                         {/* <div className="flex justify-start gap-2 md:gap-5"><p><span class="font-semibold" >0</span> followers </p> <p><span class="font-semibold" >0</span> Posts</p></div> */}
                     </div>
-
                 </Headder>
                 <div className="flex justify-center">
-
-
                 </div>
-
             </Card>
             <UserPost />
             </Body>

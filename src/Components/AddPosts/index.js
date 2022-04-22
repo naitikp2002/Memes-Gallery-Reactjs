@@ -1,12 +1,11 @@
 import React from 'react'
 import SendPost from "./SendPost"
-import UserPosts from "./UserPosts"
 import styled from 'styled-components'
 function Post() {
     return (
         <div>
-            <Body><SendPost />
-            {/* <UserPosts /> */}
+            <Body>
+                <SendPost />
             </Body>
         </div>
     )
